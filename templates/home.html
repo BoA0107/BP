@@ -49,12 +49,12 @@
 <div id="right" style="background-color: cornsilk;">
     <div id="links" style="margin-left: 50px">
         <h3>常用链接</h3>
-        {% for i in home.links %}
+        {% for i in links %}
             <div style="float: left;margin-left: 20px">
                 <ul>
                     <h3>{{ i }}</h3>
-                    {% for j in home.links[i] %}
-                        <li><a href="{{ home.links[i][j] }}" target="_blank">{{ j }}</a></li>
+                    {% for j in links[i] %}
+                        <li><a href="{{ links[i][j] }}" target="_blank">{{ j }}</a></li>
                     {% endfor %}
                 </ul>
             </div>
