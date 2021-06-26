@@ -1,8 +1,8 @@
 # -*- coding:utf-8 -*-
 
-from openpyxl import *
+from openpyxl import load_workbook
 
-
+# read excel
 def read_doc(filename, sheetname, max_line=0):
     wb = load_workbook(filename)
     sheet = wb.get_sheet_by_name(sheetname)
@@ -45,5 +45,15 @@ def make_dct(lst):
                 else:
                     break
     return dct
+
+
+# read text
+def read_txt(filename):
+    f = []
+    with open(filename) as file:
+        x = file.readlines()
+        for i in range (len(x)):
+            f.append(x[i].strip('\n'))
+    return f
 
 

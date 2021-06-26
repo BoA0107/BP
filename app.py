@@ -1,5 +1,6 @@
 from func.func_home import *
 from func.func_BCA import *
+from func.func_SQL import *
 
 app = Flask(__name__)
 
@@ -21,12 +22,12 @@ def home():
 
 @app.route('/BCA')
 def BCA():
-    return render_template('BCA.html',UAT_BC=UAT_BC)
+    return render_template('BCA.html', UAT_BC=UAT_BC)
 
 
 @app.route('/SQL')
 def SQL():
-    return render_template('SQL.html')
+    return render_template('SQL.html', f_DIQ=f_DIQ, f_DIR=f_DIR, f_NIQ=f_NIQ, f_NSD=f_NSD, f_batch=f_batch,f_new_BC=f_new_BC,f_change_diq=f_change_diq)
 
 
 @app.route('/deploy')
